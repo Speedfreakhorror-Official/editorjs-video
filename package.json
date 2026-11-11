@@ -1,0 +1,32 @@
+{
+  "name": "editorjs-video",
+  "version": "0.1.0",
+  "description": "A video block for Editor.js: paste a YouTube or Vimeo link, add a title and a poster; hosts can add providers and an upload.",
+  "private": false,
+  "license": "MIT",
+  "author": "ibrahim-jaber.com",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "editorjs",
+    "editor.js",
+    "editorjs-tool",
+    "block-tool"
+  ],
+  "devDependencies": {
+    "@editorjs/editorjs": "2.31.7"
+  },
+  "types": "./dist/index.d.ts"
+}

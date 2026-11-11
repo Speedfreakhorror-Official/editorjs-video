@@ -1,0 +1,46 @@
+:root {
+  --ejs-ink: #1f2328;
+  --ejs-muted: #59636e;
+  --ejs-line: #d1d9e0;
+  --ejs-surface: #ffffff;
+  --ejs-accent: #0969da;
+  --ejs-danger: #d1242f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ejs-ink: #f0f6fc;
+    --ejs-muted: #9198a1;
+    --ejs-line: #3d444d;
+    --ejs-surface: #0d1117;
+    --ejs-accent: #4493f8;
+    --ejs-danger: #f85149;
+  }
+}
+.ejs-video { color: var(--ejs-ink); }
+.ejs-video-btn {
+  font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+  color: var(--ejs-ink); background: var(--ejs-surface); border: 1px solid var(--ejs-line);
+}
+.ejs-video-btn:hover:not(:disabled) { border-color: var(--ejs-accent); }
+.ejs-video-btn:disabled { opacity: 0.5; cursor: default; }
+.ejs-video-input {
+  font: inherit; width: 100%; box-sizing: border-box; padding: 6px 8px; border-radius: 6px;
+  color: var(--ejs-ink); background: var(--ejs-surface); border: 1px solid var(--ejs-line);
+}
+.ejs-video-input[aria-invalid='true'] { border-color: var(--ejs-danger); }
+.ejs-video-label { display: block; font-size: 12px; color: var(--ejs-muted); margin-top: 8px; }
+.ejs-video-label .ejs-video-input { margin-top: 3px; }
+.ejs-video-error { color: var(--ejs-danger); font-size: 13px; min-height: 0; }
+.ejs-video-field { display: flex; flex-direction: column; gap: 6px; }
+.ejs-video-img { max-width: 100%; max-height: 320px; object-fit: contain; border-radius: 6px; background: var(--ejs-line); align-self: flex-start; }
+.ejs-video-empty { padding: 24px; text-align: center; color: var(--ejs-muted); border: 1px dashed var(--ejs-line); border-radius: 6px; }
+.ejs-video-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+.ejs-video-text { min-height: 1.4em; outline: none; padding: 6px 8px; border: 1px solid var(--ejs-line); border-radius: 6px; background: var(--ejs-surface); }
+.ejs-video-text:empty::before { content: attr(data-placeholder); color: var(--ejs-muted); }
+.ejs-video { display: flex; flex-direction: column; gap: 8px; }
+.ejs-video-box { position: relative; aspect-ratio: 16 / 9; max-height: 260px; border-radius: 8px; overflow: hidden; background: var(--ejs-line); display: flex; align-items: center; justify-content: center; }
+.ejs-video-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ejs-video-play { position: relative; width: 48px; height: 48px; border-radius: 50%; background: var(--ejs-surface); color: var(--ejs-ink); display: flex; align-items: center; justify-content: center; }
+.ejs-video-status { font-size: 13px; color: var(--ejs-muted); }
+.ejs-video-bar { display: flex; align-items: center; gap: 8px; }
+.ejs-video-progress { font-size: 13px; color: var(--ejs-muted); }
